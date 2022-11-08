@@ -27,3 +27,7 @@ After Analyzing the decoded signal, The first 16 bits correspond to the fan ID o
 
 So, we need to get the Pi to send this signal in order to control the fan.
 
+## Programming
+
+rpitx has a module called sendook that allows us to send on/off keyed messages which we will use to control the fan. sendook also requires us to specfiy a few extra details such as timing between on/off keys, pause duration, and # of repeats. 
+
