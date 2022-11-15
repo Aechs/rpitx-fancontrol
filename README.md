@@ -31,3 +31,22 @@ So, we need to get the Pi to send this signal in order to control the fan.
 
 rpitx has a module called sendook that allows us to send on/off keyed messages which we will use to control the fan. sendook also requires us to specfiy a few extra details such as timing between on/off keys, pause duration, and # of repeats. 
 
+
+Install rpitx
+```sh
+sudo apt-get install git
+git clone https://github.com/F5OEO/rpitx
+cd rpitx
+./install.sh
+sudo reboot
+```
+Download the program
+```sh
+wget 'https://raw.githubusercontent.com/Aechs/rpitx-fancontrol/main/parse_tx.py'
+```
+
+Run the program
+This example would set a low fan speed on the "K" fan
+```sh
+python parse_tx.py K 1
+```
